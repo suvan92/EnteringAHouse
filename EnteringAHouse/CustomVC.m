@@ -13,8 +13,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.navigationItem.rightBarButtonItem
+    UIBarButtonItem *frontDoor = [[UIBarButtonItem alloc] initWithTitle:@"Frontdoor"
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:@selector(jumpToFrontdoor)];
     
+    self.navigationItem.rightBarButtonItem = frontDoor;
+    
+    
+}
+
+-(void)jumpToFrontdoor {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
